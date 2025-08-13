@@ -1,0 +1,58 @@
+<!--
+ * @Author: 徐佳德 1404577549@qq.com
+ * @Date: 2025-08-07 10:29:19
+ * @LastEditors: 徐佳德 1404577549@qq.com
+ * @LastEditTime: 2025-08-11 17:55:14
+ * @FilePath: \图像类插件\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @Author: 徐佳德 1404577549@qq.com
+ * @Date: 2025-08-01 09:01:11
+ * @LastEditors: 徐佳德 1404577549@qq.com
+ * @LastEditTime: 2025-08-07 09:31:29
+ * @FilePath: \1.Hello World\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图像类插件</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- 确保CEP库正确加载 -->
+    <script type="text/javascript" src="./js/csinterface.js"></script>
+    <script type="text/javascript" src="./host/main.jsx"></script>
+</head>
+
+<body class="app">
+    <div class="header">
+        <h2>图片类插件</h2>
+    </div>
+
+    <div class="main-content">
+        <div class="controls">
+            <div class="input-group">
+                <label for="imagePathInput">图片文件夹路径：</label>
+                <input type="text" id="imagePathInput" placeholder="例如：G:\图片文件夹 或点击选择文件夹" class="path-input">
+                <button id="selectFolderBtn" class="btn btn-secondary">选择文件夹</button>
+            </div>
+            
+            <button id="editAndContinueBtn" class="btn btn-success">
+                点击一键生成
+            </button>
+        </div>
+        
+        <!-- 图片预览区域 -->
+        <div class="image-preview-section">
+            <h3>图片预览</h3>
+            <div id="imagePreviewContainer" class="image-preview-container">
+                <div class="no-images-message">请选择文件夹以预览图片</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
