@@ -184,3 +184,4 @@ var imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff', '.tif']
 
 **兼容性：** 如果计算失败，会自动回退到原来的105%缩放，确保功能稳定性。
 
+111
