@@ -4,16 +4,25 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
         {
             "type": "extendscript-debug",
             "request": "attach",
-            "name": "Attach to ExtendScript Engine"
+            "name": "Attach to ExtendScript Engine",
+            "engineName": "photoshop"
         },
         {
             "type": "extendscript-debug",
             "request": "launch",
-            "name": "Launch Script in ExtendScript Engine"
+            "name": "Launch ExtendScript",
+            "program": "${workspaceFolder}/host/main.jsx",
+            "engineName": "photoshop"
+        },
+        {
+            "type": "extendscript-debug",
+            "request": "launch",
+            "name": "Debug Current File",
+            "program": "${file}",
+            "engineName": "photoshop"
         }
     ]
 }

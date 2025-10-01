@@ -2,7 +2,7 @@
  * @Author: 徐佳德 1404577549@qq.com
  * @Date: 2025-08-07 10:29:19
  * @LastEditors: 徐佳德 1404577549@qq.com
- * @LastEditTime: 2025-08-11 17:55:14
+ * @LastEditTime: 2025-08-25 15:26:30
  * @FilePath: \图像类插件\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -35,20 +35,47 @@
         <div class="controls">
             <div class="input-group">
                 <label for="imagePathInput">图片文件夹路径：</label>
-                <input type="text" id="imagePathInput" placeholder="例如：G:\图片文件夹 或点击选择文件夹" class="path-input">
+                <input type="text" id="imagePathInput" placeholder="请输入文件夹路径，例如：G:\图片文件夹 或点击选择文件夹" class="path-input">
                 <button id="selectFolderBtn" class="btn btn-secondary">选择文件夹</button>
+                <button id="collectNestedBtn" class="btn btn-info">选择嵌套文件夹</button>
             </div>
             
             <button id="editAndContinueBtn" class="btn btn-success">
-                点击一键生成
+                文件夹渲染
             </button>
-        </div>
-        
-        <!-- 图片预览区域 -->
-        <div class="image-preview-section">
-            <h3>图片预览</h3>
-            <div id="imagePreviewContainer" class="image-preview-container">
-                <div class="no-images-message">请选择文件夹以预览图片</div>
+            <button id="renderNestedNewBtn" class="btn btn-danger">
+                嵌套文件夹渲染
+            </button>
+
+            <button id="uploadTxtBtn" class="btn btn-secondary">合成预览（TXT文件）</button>
+            <input type="file" id="txtUploadInput" accept=".txt" style="display:none">
+            
+             <!-- <button id="convertToSmartBtn" class="btn btn-primary">
+                一键智能图层
+            </button> -->
+            <button id="renameLayersBtn" class="btn btn-success">
+                一键重命名图层
+            </button> 
+
+            
+
+            
+        </div>        
+        <!-- 预览左右分栏 -->
+        <div id="previewSplit" style="display:flex; gap:16px; align-items:stretch;">
+            <!-- 左：图片预览（仅一列） -->
+            <div class="image-preview-section" style="flex:1; min-width:0;">
+                <h3 style="margin:0 0 8px 0;">图片预览</h3>
+                <div id="imagePreviewContainer" class="image-preview-container" style="display:grid; grid-template-columns: repeat(1, 1fr); gap:10px;">
+                    <div class="no-images-message">请选择文件夹以预览图片</div>
+                </div>
+            </div>
+
+            <!-- 右：合成预览（TXT链接渲染） -->
+            <div class="image-preview-section" style="flex:1; min-width:0;">
+
+                <h3 style="margin:0 0 8px 0;">合成预览</h3>
+                <div id="composePreviewContainer" class="image-preview-container" style=" margin-top:8px; display:grid; grid-template-columns: repeat(1, 1fr); gap:10px;"></div>
             </div>
         </div>
     </div>
